@@ -1,0 +1,22 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          okta:
+            client-id: <assigned-client-id>
+            client-secret: <assigned-client-secret>
+        provider:
+          okta:
+            issuer-uri: http://<assigned-subdomain>.oktapreview.com/oauth2/default
+      resourceServer:
+        jwt:
+          issuer-uri: https://<assigned-subdomain>
+
+    rsocket:
+      server:
+        port: 7635
+
+    server:
+        port: 7634
+
